@@ -10,6 +10,7 @@
         <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/drag.js"></script>
+        <script type="text/javascript" src="js/function.js"></script>
     </head>
     <body>
         <div class="top-div"></div>
@@ -18,14 +19,78 @@
                 <div class=""></div>
             </div>
         </div>
-        <div class="content">
-            <div class="panel panel-primary select-control new-panel hander">
-                <div class="panel-heading">页面设置<small>(Page Setting)</small></div>
+        <div class="content-panel">
+            <div class="panel panel-primary new-panel">
+                <div class="panel-heading"><div class="panel-title">页面设置<small>(Page Setting)</small></div><div class="panel-control"><div class="panel-close">口</div><div class="panel-close">X</div><div class="panel-close" style="font-weight: bold;">一</div></div></div>
+                <div class="panel-body">
+                </div>
+                <div class="panel-resize"></div>
+            </div>
+            <div class="panel panel-primary new-panel">
+                <div class="panel-heading"><div class="panel-title">页面设置<small>(Page Setting)</small></div><div class="panel-control"><div class="panel-close">X</div></div></div>
                 <div class="panel-body" id="page_setting">
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                    1<br />
+                </div>
+                <div class="panel-resize"></div>
+            </div>
+        </div>
+        <div class="footer-panel">
+            <div class="panel-container">
+                <div class="panel panel-primary new-panel">
+                    <div class="panel-heading"><div class="panel-title">页面设置<small>(Page Setting)</small></div><div class="panel-control"><div class="panel-close">口</div><div class="panel-close">X</div><div class="panel-close" style="font-weight: bold;">一</div></div></div>
+                </div>
+            </div>
+            <div class="panel-container">
+                <div class="panel panel-primary new-panel">
+                    <div class="panel-heading"><div class="panel-title">页面设置<small>(Page Setting)</small></div><div class="panel-control"><div class="panel-close">口</div><div class="panel-close">X</div><div class="panel-close" style="font-weight: bold;">一</div></div></div>
+                </div>
+            </div>
+            <div class="panel-container">
+                <div class="panel panel-primary new-panel">
+                    <div class="panel-heading"><div class="panel-title">页面设置<small>(Page Setting)</small></div><div class="panel-control"><div class="panel-close">口</div><div class="panel-close">X</div><div class="panel-close" style="font-weight: bold;">一</div></div></div>
                 </div>
             </div>
         </div>
     </body>
-        <!--<script type="text/javascript" src="js/function.js"></script>-->
+    <script type="text/javascript">
+        $(function() {
+            $('.content-panel .panel').each(function() {
+                $(this).dragging({
+                    move: 'both',
+                    randomPosition: true,
+                    hander: '.panel-heading',
+                    resize: '.panel-resize'
+                });
+            });
+            $('.content-panel').createPanel();
+        });
+    </script>
 </html>
 

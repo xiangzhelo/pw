@@ -25,20 +25,24 @@ body{
     overflow: hidden;
 }
 .new-panel{
-    width: 50%;
     float: right;
-    border-color: #8b6c61;
+    border-color: #72584e;
     position: absolute;
+    min-width: 200px;
+}
+.new-panel .panel-body{
+    width:100%;
+    overflow: auto;
 }
 .new-panel .panel-heading{
     background-color: #8b6c61;
     border-color: #8b6c61;
+    height: 40px;
 }
-.content{
+.content-panel{
     width: 85%;
     height: 90%;
     float: right;
-    padding: 3%;
 }
 .menu-panel{
     position: absolute;
@@ -46,4 +50,59 @@ body{
     height: 90%;
     top: 20%;
     overflow: hidden;
+}
+.new-panel .panel-close{
+    display: inline;
+    float: right;
+    border: 1px solid #fff;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    border-radius: 3px;
+    background: #eda26b;
+    margin-right: 5px;
+}
+.new-panel .panel-resize{
+    width: 10px;
+    cursor: nw-resize !important;
+    height: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    /*margin: 0 7px 2px 0;*/
+    background: url("../images/panel-resize.png") round;
+}
+.new-panel .panel-control{
+    position: absolute;
+    right: 10px;
+    background: #8b6c61;
+}
+.new-panel .panel-title{
+    overflow: hidden;
+    position: absolute;
+    height: 20px;
+}
+.no-select-text{
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; 
+}
+.new-panel .panel-close:hover{
+    box-shadow: 0 0 10px #eda26b;
+}
+.footer-panel>.panel{
+    width: 200px;
+    position: absolute;
+}
+.footer-panel{
+    position: absolute;
+    bottom: 0px;
+}
+.footer-panel .panel-container{
+    position: relative;
+    width: 200px;
+    height: 40px;
+    display: inline-block;
 }
